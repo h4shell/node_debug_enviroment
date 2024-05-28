@@ -9,4 +9,4 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-    entrypoint: tail -f /dev/null
+    entrypoint: su -c "npx -y nodemon index.js"
