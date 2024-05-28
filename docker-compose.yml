@@ -9,4 +9,4 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-    entrypoint: su -c "npx -y nodemon index.js"
+    entrypoint: su -c "npx nodemon --inspect-brk --legacy-watch --inspect=0.0.0.0:9229 index.js 2> /dev/null | npx nodemon index.js"
